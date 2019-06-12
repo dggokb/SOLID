@@ -1,5 +1,5 @@
 package PetShop;
-
+//UNICA ALTERACAO FEITA SERIA O TIPO DE ANIMAL E O TIPO DE ATENDIMENTO, ONDE SERIA ADICIONADO OU REFATORADO EM SEUS ENUM
 import animal.AnimalASerAtendido;
 import animal.TotalRecebidoDosAtendimentos;
 import funcionario.Funcionario;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BalancoFinanceiroDoPetShop {
     private List<Funcionario> funcionario;
-    private List<AnimalASerAtendido> animalASerAtendido;
+    private List<AnimalASerAtendido> animalASerAtendido;//necessidade de ter uma classe PetShop
 
     public BalancoFinanceiroDoPetShop(List<Funcionario> funcionario,
                                       List<AnimalASerAtendido> animalASerAtendido) {
@@ -29,5 +29,5 @@ public class BalancoFinanceiroDoPetShop {
 
     public double totalDoBalancoFinanceiroDoPetShop() {
         return calculoReferenteAClientes() - calculoReferenteAFuncionario();
-    }
+    }//aqui mandar parametros aqui, funcionario e animalASerAtendido
 }
