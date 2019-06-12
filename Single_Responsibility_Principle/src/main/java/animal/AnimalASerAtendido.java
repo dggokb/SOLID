@@ -11,8 +11,8 @@ public class AnimalASerAtendido {
         this.nome = nome;
         this.peso = peso;
         this.tipoDoAnimal = tipoDoAnimal;
-        this.tipoDeAtendimentoNoPetShop = tipoDeAtendimentoNoPetShop;
-        this.valorDoAtendimento = tipoDeAtendimentoNoPetShop.valorDoAtendimento();
+        this.tipoDeAtendimentoNoPetShop = tipoDeAtendimentoNoPetShop;//aqui
+        this.valorDoAtendimento = tipoDeAtendimentoNoPetShop.valorDoAtendimento();//nao seria um responsabilidade do animal
     }
 
     public String nomeDoAnimalASerAtendido() {

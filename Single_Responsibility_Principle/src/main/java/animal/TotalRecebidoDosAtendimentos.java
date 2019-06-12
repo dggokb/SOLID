@@ -8,8 +8,9 @@ public class TotalRecebidoDosAtendimentos {
     public double somatorioDosValoresRecebidosDosAtendimentos(List<AnimalASerAtendido> animalASerAtendido) {
         double valorTotalDosAtendimentos = 0;
         for (AnimalASerAtendido a : animalASerAtendido)
-            valorTotalDosAtendimentos += a.tipoDeAtendimentoDoAnimalASerAtendido().valorDoAtendimento();
-
+            valorTotalDosAtendimentos += a.tipoDeAtendimentoDoAnimalASerAtendido().valorDoAtendimento();//violando o valor
+                                                                                                        //queroAcucar().vouNoVizinho().EntroNaCasa().AbroAGeladeira().PegoAcucar();
+                                                                                                        //vizinhoMeEmprestaOAcucar();
         return valorTotalDosAtendimentos;
     }
 }
