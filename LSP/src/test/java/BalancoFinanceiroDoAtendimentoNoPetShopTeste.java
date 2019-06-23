@@ -4,6 +4,7 @@ import animal.DadosDoAnimal.EspecieDoAnimal;
 import animal.TipoDeAtendimentoNoPetShop;
 import animal.ValoresDosServicosPrestadosNoPetShop.ValorDoBanho;
 import funcionario.Funcionario;
+import funcionario.Salarios.SalarioDoTosador;
 import funcionario.Salarios.SalarioDoVeterinario;
 import funcionario.TiposDeProfissaoDoFuncionario;
 import org.assertj.core.api.Assertions;
@@ -16,16 +17,22 @@ class BalancoFinanceiroDoAtendimentoNoPetShopTeste {
 
     @Test
     public void deveConseguirRequisitarUmBalancoFinanceiroDoPetShop() {
-        double valorDoBalancoFinanceiroEsperado = -4950.0;
+        double valorDoBalancoFinanceiroEsperado = -6350;
 
-        TiposDeProfissaoDoFuncionario profissaoDoFuncionario = TiposDeProfissaoDoFuncionario.VETERINARIO;
+        TiposDeProfissaoDoFuncionario profissaoDoPrimeiroFuncionario = TiposDeProfissaoDoFuncionario.VETERINARIO;
+        TiposDeProfissaoDoFuncionario profissaoDoSegundoFuncionario = TiposDeProfissaoDoFuncionario.TOSADOR;
         String nomeDoFuncionario = "Frank";
         int idade = 30;
-        Funcionario funcionariosDoPetShop = new Funcionario(
-                profissaoDoFuncionario,
+        Funcionario primeiroFuncionario = new Funcionario(
+                profissaoDoPrimeiroFuncionario,
                 nomeDoFuncionario,
                 idade,
                 new SalarioDoVeterinario());
+        Funcionario segundoFuncionario = new Funcionario(
+                profissaoDoSegundoFuncionario,
+                nomeDoFuncionario,
+                idade,
+                new SalarioDoTosador());
 
         String nomeDoAnimal = "Max";
         double peso = 10;
@@ -38,7 +45,7 @@ class BalancoFinanceiroDoAtendimentoNoPetShopTeste {
                 espcieDoAnimal,
                 tipoDeAtendimentoNoPetShop,
                 valorDoBanho);
-        List<Funcionario> funcionario = Arrays.asList(funcionariosDoPetShop);
+        List<Funcionario> funcionario = Arrays.asList(primeiroFuncionario,segundoFuncionario);
         List<CadastroDoAnimalAtendido> animal = Arrays.asList(animaisAtendidosNoPetShop);
 
         BalancoFinanceiroDoPetShop balancoFinanceiroDoPetShop = new BalancoFinanceiroDoPetShop();

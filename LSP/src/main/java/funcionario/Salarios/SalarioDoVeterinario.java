@@ -3,7 +3,15 @@ package funcionario.Salarios;
 //PODE SER POSSÍVEL APLICAR UM IMPOSTO EM CIMA DO SALARIO POR EXEMPLO
 
 public class SalarioDoVeterinario implements SalarioDoProfissinal {
+    private double salario;
+    private ManipuladorDeImposto manipuladorDeImposto;
+
+    public SalarioDoVeterinario() {
+        this.manipuladorDeImposto = new ManipuladorDeImposto();
+        this.salario = 5000;
+    }
+
     public double valorDoSalarioDoProfissional() {
-        return 5000;
+        return  salario - manipuladorDeImposto.aplicaImpostoDoVeterinario(salario);
     }
 }

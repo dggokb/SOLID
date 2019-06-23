@@ -17,6 +17,6 @@ public class Funcionario {
     }
 
     public double salarioDoFuncionario() {
-        return salario = salario;
+        return salario;
     }
 }
