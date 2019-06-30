@@ -1,9 +1,12 @@
 package animal.ValoresDosServicosPrestadosNoPetShop;
-//REGRA DE NEGOCIO DO VALOR DO BANHO E TOSA, ESSA REGRA AO SER ALTERADA NAO AFETA AS OUTRAS, PODENDO SER ESTENDIDA MAS NAO MODIFICADA
-//SE A REGRA DE NEGOCIO DO BANHO NAO EXISTIR, A TOSA NAO EXISTIRA TAMBÉM
+/*
+Removendo a regra de negocio do valor do atendimento da classe FichaDeCadastroDoAnimalAtendido, e utilizando uma interface mais genêrica
+como o valorDeAtendimento, isolamos a regra de negócio do valorDeAtendimento, possibilitando que essa classe seja fechada para modificação
+e aberta para extensão, .
+ */
 public class ValorBanhoETosa implements ValorDoAtendimento {
     public double valorDoAtendimento() {
-        ValorDoBanho valorDoBanho = new ValorDoBanho();
+        ValorDoAtendimento valorDoBanho = new ValorDoBanho();
         return valorDoBanho.valorDoAtendimento()+70;
     }
 }

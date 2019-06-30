@@ -1,5 +1,9 @@
 package animal.ValoresDosServicosPrestadosNoPetShop;
-//REGRA DE NEGOCIO DO VALOR DO ATENDIMENTO DO VETERINARIO, ESSA REGRA AO SER ALTERADA NAO AFETA AS OUTRAS, PODENDO SER ESTENDIDA MAS NAO MODIFICADA
+/*
+Removendo a regra de negocio do valor do atendimento da classe FichaDeCadastroDoAnimalAtendido, e utilizando uma interface mais genêrica
+como o valorDeAtendimento, isolamos a regra de negócio do valorDeAtendimento, possibilitando que essa classe seja fechada para modificação
+e aberta para extensão.
+ */
 public class ValorDoAtendimentoVeterinario implements ValorDoAtendimento {
     public double valorDoAtendimento() {
         return 200;

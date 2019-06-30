@@ -1,5 +1,5 @@
 import PetShop.BalancoFinanceiroDoPetShop;
-import animal.DadosDoAnimal.CadastroDoAnimalAtendido;
+import animal.DadosDoAnimal.FichaDeCadastroDoAnimalAtendido;
 import animal.DadosDoAnimal.EspecieDoAnimal;
 import animal.TipoDeAtendimentoNoPetShop;
 import animal.ValoresDosServicosPrestadosNoPetShop.ValorDoBanho;
@@ -39,14 +39,14 @@ class BalancoFinanceiroDoAtendimentoNoPetShopTeste {
         EspecieDoAnimal espcieDoAnimal = EspecieDoAnimal.CACHORRO;
         TipoDeAtendimentoNoPetShop tipoDeAtendimentoNoPetShop = TipoDeAtendimentoNoPetShop.BANHO;
         ValorDoBanho valorDoBanho = new ValorDoBanho();
-        CadastroDoAnimalAtendido animaisAtendidosNoPetShop = new CadastroDoAnimalAtendido(
+        FichaDeCadastroDoAnimalAtendido animaisAtendidosNoPetShop = new FichaDeCadastroDoAnimalAtendido(
                 nomeDoAnimal,
                 peso,
                 espcieDoAnimal,
                 tipoDeAtendimentoNoPetShop,
                 valorDoBanho);
         List<Funcionario> funcionario = Arrays.asList(primeiroFuncionario,segundoFuncionario);
-        List<CadastroDoAnimalAtendido> animal = Arrays.asList(animaisAtendidosNoPetShop);
+        List<FichaDeCadastroDoAnimalAtendido> animal = Arrays.asList(animaisAtendidosNoPetShop);
 
         BalancoFinanceiroDoPetShop balancoFinanceiroDoPetShop = new BalancoFinanceiroDoPetShop();
 

@@ -1,6 +1,6 @@
 package PetShop;
 
-import animal.DadosDoAnimal.CadastroDoAnimalAtendido;
+import animal.DadosDoAnimal.FichaDeCadastroDoAnimalAtendido;
 import animal.TotalRecebidoDosAtendimentos;
 import funcionario.Funcionario;
 import funcionario.TotalDosGastosComPagamentoDeFuncionario;
@@ -16,13 +16,13 @@ public class BalancoFinanceiroDoPetShop {
         return totalDosGastosComPagamentoDeFuncionario.somatorioDeTodosOsSalarios(funcionario);
     }
 
-    private double calculoReferenteAValorDosAnimaisAtendidos(List<CadastroDoAnimalAtendido> cadastroDoAnimalAtendido) {
+    private double calculoReferenteAValorDosAnimaisAtendidos(List<FichaDeCadastroDoAnimalAtendido> fichaDeCadastroDoAnimalAtendido) {
         TotalRecebidoDosAtendimentos totalRecebidoDosAtendimentos = new TotalRecebidoDosAtendimentos();
-        return totalRecebidoDosAtendimentos.somatorioDosValoresRecebidosDosAtendimentos(cadastroDoAnimalAtendido);
+        return totalRecebidoDosAtendimentos.somatorioDosValoresRecebidosDosAtendimentos(fichaDeCadastroDoAnimalAtendido);
     }
 
     public double totalDoBalancoFinanceiroDoPetShop(List<Funcionario> funcionario,
-                                                    List<CadastroDoAnimalAtendido> cadastroDoAnimalAtendido) {
-        return calculoReferenteAValorDosAnimaisAtendidos(cadastroDoAnimalAtendido) - calculoReferenteAFuncionariosDoPetShop(funcionario);
+                                                    List<FichaDeCadastroDoAnimalAtendido> fichaDeCadastroDoAnimalAtendido) {
+        return calculoReferenteAValorDosAnimaisAtendidos(fichaDeCadastroDoAnimalAtendido) - calculoReferenteAFuncionariosDoPetShop(funcionario);
     }
 }
